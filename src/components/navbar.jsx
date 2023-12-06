@@ -37,14 +37,14 @@ const Navbar = () => {
               Projects
             </a>
           </li>
-          <li className=" p-4">
+          {/* <li className=" p-4">
             <Link
               to={"/contact"}
               className="resume__button font-medium text-[1em] rounded-[8px] hover:text-[#fff] hover:bg-[#3d3d40] border-transparent border border-solid px-[1.2em] py-[0.6em] transition-all duration-[0.5s] ease-out"
             >
               Contact
             </Link>
-          </li>
+          </li> */}
           <li className="h-10 w-0.5 bg-slate-700 p-[1px]"></li>
           <li className=" p-2">
             <Link
@@ -101,7 +101,7 @@ const Navbar = () => {
                 Projects
               </a>
             </li>
-            <li className=" border-b border-[#000] flex justify-center">
+            {/* <li className=" border-b border-[#000] flex justify-center">
               <Link
                 to={"/contact"}
                 onClick={() => setNav(!nav)}
@@ -109,7 +109,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-            </li>
+            </li> */}
             <li className=" flex justify-center">
               <Link
                 to={"/resume"}

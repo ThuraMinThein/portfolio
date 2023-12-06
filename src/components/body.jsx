@@ -34,10 +34,7 @@ const Body = () => {
         className="about w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl mt-[100px]"
       >
         <h1 className="text-center font-bold text-lg md:text-2xl">About Me</h1>
-        <p>
-          My name is Thura Min Thein.I am currently 18 years old.Passionate
-          Software Engineer from Myanmar.
-        </p>
+        <p>blah blah blah</p>
       </div>
       <div id="projects">
         <div>
