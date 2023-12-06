@@ -1,4 +1,4 @@
-import Typed from "react-typed";
+import { TypeAnimation } from "react-type-animation";
 
 const Body = () => {
   return (
@@ -18,12 +18,19 @@ const Body = () => {
           </h1>
           <h2 className=" p-3 text-xl md:text-[30px]">
             Software Developer <br />
-            <Typed
-              className=" text-[16px] md:text-xl text-[#9370db]"
+            {/* <Typed
+              className=""
               strings={["Java", "Dart", "Javascript"]}
               typeSpeed={60}
               backSpeed={60}
               loop
+            /> */}
+            <TypeAnimation
+              className=" text-[16px] md:text-xl text-[#9370db]"
+              sequence={["Java", 1000, "Dart", 1000, "JavaScript", 1000]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
             />
           </h2>
         </div>
