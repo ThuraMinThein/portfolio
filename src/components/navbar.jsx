@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import menuBar from "/menu.svg";
-import menuClose from "/close.svg";
+import menuBar from "../img/menu.svg";
+import menuClose from "../img/close.svg";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="flex justify-end items-center h-20 max-w-[1024px] bg-slate-100 mx-auto sticky top-0 z-[1]">
+    <div className="flex justify-end items-center h-20 max-w-[1440px] bg-transparent mx-auto sticky top-0 z-[1]">
       <nav className="navBar">
         <ul className="md:flex justify-evenly items-center hidden">
           <li className=" p-4">
@@ -37,14 +37,6 @@ const Navbar = () => {
               Projects
             </a>
           </li>
-          {/* <li className=" p-4">
-            <Link
-              to={"/contact"}
-              className="resume__button font-medium text-[1em] rounded-[8px] hover:text-[#fff] hover:bg-[#3d3d40] border-transparent border border-solid px-[1.2em] py-[0.6em] transition-all duration-[0.5s] ease-out"
-            >
-              Contact
-            </Link>
-          </li> */}
           <li className="h-10 w-0.5 bg-slate-700 p-[1px]"></li>
           <li className=" p-2">
             <Link
@@ -101,15 +93,6 @@ const Navbar = () => {
                 Projects
               </a>
             </li>
-            {/* <li className=" border-b border-[#000] flex justify-center">
-              <Link
-                to={"/contact"}
-                onClick={() => setNav(!nav)}
-                className="resume__button text-[1em] w-full text-center text-[#000] hover:text-[#fff] hover:bg-[#3d3d40] border-transparent border border-solid px-[1.2em] py-[0.6em] duration-[0.5s] ease-out"
-              >
-                Contact
-              </Link>
-            </li> */}
             <li className=" flex justify-center">
               <Link
                 to={"/resume"}
