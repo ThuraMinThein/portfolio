@@ -28,11 +28,18 @@ h1 {
 }
 
 .profile,
-.about {
+.about,
+.projectDiv {
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about,
+.projectDiv:hover {
+  box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-7px) scale(1.01); */
 }

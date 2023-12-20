@@ -1,34 +1,44 @@
-/* eslint-disable react/no-unescaped-entities */
 import { TypeAnimation } from "react-type-animation";
+//import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { useState } from "react";
+
 import profile from "../img/p.jpg";
 import github from "../img/github.svg";
-import email from "../img/email.svg";
+import emailLogo from "../img/email.svg";
 import linkedin from "../img/linkedin.svg";
 
 const Body = () => {
+  const { email, setEmail } = useState("thur7012@gmail.com");
+
   const launchEmail = () => {
     // window.open("https://mail.google.com");
 
-    window.location.href = `mailto:thur7012@gmail.com`;
+    //window.location.href = `mailto:${email}`;
 
-    //copy email
     navigator.clipboard
-      .writeText("thur7012@gmail.com")
+      .writeText(email)
       .then(() => {
-        console.log("copied!");
+        alert("copied email to clipboard");
       })
       .catch(() => {
-        console.error("couldn't copy eamil");
+        console.error("couldn't copy email");
       });
   };
+
+  // const copyEmail = () => {
+  //   navigator.clipboard
+  //     .writeText(email)
+  //     .then(() => {
+  //       console.log("copied email to clipboard");
+  //     })
+  //     .catch(() => {
+  //       console.error("couldn't copy eamil");
+  //     });
+  // };
 
   return (
     <main className="flex justify-center items-center flex-col">
       <div id="home" className=" h-screen flex items-center">
-        {/**
-         * css
-         *  md:mt-[100px]
-         */}
         <div className="profile w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl hover:-rotate-2 hover:scale-105 ease-in duration-300">
           <img
             src={profile}
@@ -54,11 +64,11 @@ const Body = () => {
       </div>
       {/*home end */}
       <div id="about" className="flex items-center h-screen">
-        <div className="about w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl">
+        <div className="about w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
           <h1 className="text-center font-bold text-lg md:text-2xl">
             About Me
           </h1>
-          <p className=" text-justify px-6 pb-9">
+          <p className=" text-[10px] md:text-[15px] text-justify px-6 pb-9">
             Hello there! I'm Thura Min Thein, an 18-year-old software enthusiast
             who absolutely loves coding. For the year I've been fully immersed
             in the field of software engineering finding great satisfaction, in
@@ -82,14 +92,14 @@ const Body = () => {
         <div>
           <div className="">
             <h1 className="text-4xl my-10">Projects</h1>
-            <div className="flex md:max-w-5xl justify-between flex-wrap">
+            <div className="flex md:max-w-5xl flex-col ">
               <a href="https://github.com/ThuraMinThein/DailyList">
-                <div className="  text-center my-auto w-[500px] h-[350px] bg-slate-400 m-1 rounded-xl ">
-                  Daily List
+                <div className=" projectDiv text-center my-auto w-[500px] h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in mb-[50px]">
+                  DailyList
                 </div>
               </a>
               <a href="https://github.com/ThuraMinThein/Physics-Spot">
-                <div className=" text-center my-auto w-[500px] h-[350px] bg-slate-400 m-1 rounded-xl ">
+                <div className="projectDiv text-center my-auto w-[500px] h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
                   Physics Spot
                 </div>
               </a>
@@ -99,7 +109,7 @@ const Body = () => {
       </div>
       {/* project end */}
 
-      <div id="contact" className=" flex h-60 w-[1024px]">
+      <div id="contact" className=" flex h-60 max-w-[1024px]">
         <a href="https://github.com/thuraminthein">
           <img src={github} alt="github" className="github w-[55px]" />
         </a>
@@ -107,7 +117,7 @@ const Body = () => {
           <img src={linkedin} alt="linkedin" className="linkedin w-[55px]" />
         </a>
         <div className=" cursor-pointer" onClick={launchEmail}>
-          <img src={email} alt="email" className="email w-[55px]" />
+          <img src={emailLogo} alt="email" className="email w-[55px]" />
         </div>
       </div>
       {/**contact end */}
