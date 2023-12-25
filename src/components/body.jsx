@@ -8,7 +8,7 @@ import emailLogo from "../img/email.svg";
 import linkedin from "../img/linkedin.svg";
 
 const Body = () => {
-  const { email, setEmail } = useState("thur7012@gmail.com");
+  const email = "thur7012@gmail.com";
 
   const launchEmail = () => {
     // window.open("https://mail.google.com");
@@ -18,6 +18,7 @@ const Body = () => {
     navigator.clipboard
       .writeText(email)
       .then(() => {
+        console.log(email);
         alert("copied email to clipboard");
       })
       .catch(() => {
