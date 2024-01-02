@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 //import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 import { useState } from "react";
 
-import profile from "../img/p.jpg";
+import profile from "../img/profile.jpg";
 import github from "../img/github.svg";
 import emailLogo from "../img/email.svg";
 import linkedin from "../img/linkedin.svg";
@@ -39,18 +39,18 @@ const Body = () => {
 
   return (
     <main className="flex justify-center items-center flex-col">
-      <div id="home" className=" h-screen flex items-center">
-        <div className="profile w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl hover:-rotate-2 hover:scale-105 ease-in duration-300">
+      <div id="home" className="h-[550px] md:h-screen flex items-center">
+        <div className="profile w-[380px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl hover:-rotate-2 hover:scale-105 ease-in duration-300">
           <img
             src={profile}
             alt="profile"
-            className="profile__pic w-28 md:w-40 rounded-full hover:rotate-[360deg] ease-in-out duration-300"
+            className="profile__pic w-24 md:w-40 rounded-full hover:rotate-[360deg] ease-in-out duration-300"
           />
           <div>
-            <h1 className="p-3 mt-4 text-4xl md:text-[60px]">
+            <h1 className="p-3 mt-4 text-[30px] md:text-[60px]">
               Hi, I am Thura Min Thein
             </h1>
-            <h2 className=" p-3 text-xl md:text-[30px] my-4">
+            <h2 className=" p-3 text-[18px] md:text-[30px] my-2 md:my-4">
               Software Developer <br />
               <TypeAnimation
                 className=" text-[16px] md:text-xl text-[#9370db] "
@@ -64,12 +64,12 @@ const Body = () => {
         </div>
       </div>
       {/*home end */}
-      <div id="about" className="flex items-center h-screen">
-        <div className="about w-[450px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
+      <div id="about" className="flex items-center h-[800px] md:h-screen">
+        <div className="about w-[380px] md:w-[700px] h-[550px] md:h-[500px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
           <h1 className="text-center font-bold text-lg md:text-2xl">
             About Me
           </h1>
-          <p className=" text-[10px] md:text-[15px] text-justify px-6 pb-9">
+          <p className=" text-[14px] md:text-[15px] text-justify px-6 pb-9">
             Hello there! I'm Thura Min Thein, an 18-year-old software enthusiast
             who absolutely loves coding. For the year I've been fully immersed
             in the field of software engineering finding great satisfaction, in
@@ -89,18 +89,18 @@ const Body = () => {
       </div>
       {/* about end */}
 
-      <div id="projects" className="flex items-center h-screen">
+      <div id="projects" className="flex items-center h-[800px] md:h-screen">
         <div>
-          <div className="">
+          <div>
             <h1 className="text-4xl my-10">Projects</h1>
             <div className="flex md:max-w-5xl flex-col ">
               <a href="https://github.com/ThuraMinThein/DailyList">
-                <div className=" projectDiv text-center my-auto w-[500px] h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in mb-[50px]">
+                <div className=" projectDiv text-center my-auto w-[350px] md:w-[500px] h-[250px] md:h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in mb-[50px]">
                   DailyList
                 </div>
               </a>
               <a href="https://github.com/ThuraMinThein/Physics-Spot">
-                <div className="projectDiv text-center my-auto w-[500px] h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
+                <div className="projectDiv text-center my-auto w-[350px] md:w-[500px] h-[250px] md:h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
                   Physics Spot
                 </div>
               </a>
