@@ -40,7 +40,7 @@ const Body = () => {
   return (
     <main className="flex justify-center items-center flex-col">
       <div id="home" className="h-[550px] md:h-screen flex items-center">
-        <div className="profile w-[380px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl hover:-rotate-2 hover:scale-105 ease-in duration-300">
+        <div className="profile w-[380px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl ease-in duration-300">
           <img
             src={profile}
             alt="profile"
@@ -89,7 +89,7 @@ const Body = () => {
       </div>
       {/* about end */}
 
-      <div id="projects" className="flex items-center h-[800px] md:h-screen">
+      <div id="projects" className="flex items-center h-[800px] md:h-[1000px]">
         <div>
           <div>
             <h1 className="text-4xl my-10">Projects</h1>
@@ -110,7 +110,7 @@ const Body = () => {
       </div>
       {/* project end */}
 
-      <div id="contact" className=" flex h-60 max-w-[1024px]">
+      <div id="contact" className=" flex h-60 max-w-[1024px] md:mt-12">
         <a href="https://github.com/thuraminthein">
           <img src={github} alt="github" className="github w-[55px]" />
         </a>

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #f0f2f5;
+  /* background-color: #f0f2f5; */
+  background-color: #e7e7e7;
   scroll-padding-top: 1.25rem;
   overflow-x: hidden;
 }
@@ -30,18 +31,27 @@ h1 {
 .profile,
 .about,
 .projectDiv {
-  background-color: #fff;
+  background-color: #e7e7e7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 5.5px 5.5px 11px #929292, -5.5px -5.5px 11px #ffffff;
+}
+
+.profile:hover {
+  /* box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2); */
+
+  box-shadow: 11px 11px 22px #929292, -11px -11px 22px #ffffff;
 }
 
 .about:hover {
-  box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2); */
+
+  box-shadow: 11px 11px 22px #929292, -11px -11px 22px #ffffff;
 }
 .projectDiv:hover {
-  box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 10px 10px 13px 7px rgba(0, 0, 0, 0.2); */
+  box-shadow: 11px 11px 22px #929292, -11px -11px 22px #ffffff;
   /* transform: translateY(-7px) scale(1.01); */
 }

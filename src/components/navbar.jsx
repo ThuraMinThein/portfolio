@@ -19,7 +19,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="flex justify-end items-center h-20 max-w-[1440px] bg-[#f0f2f5] bg-opacity-90 mx-auto sticky top-0 z-[1]">
+    <div className="flex justify-end items-center h-20 max-w-[1440px] bg-[#e7e7e7] bg-opacity-90 mx-auto sticky top-0 z-[1]">
       <nav className="navBar">
         <ul className="md:flex justify-evenly items-center hidden">
           <li className=" p-4">
