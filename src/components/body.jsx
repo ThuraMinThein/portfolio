@@ -1,14 +1,13 @@
 import { TypeAnimation } from "react-type-animation";
 //import { Parallax, ParallaxBanner } from "react-scroll-parallax";
-import { useState } from "react";
 
-import profile from "../img/profile.jpg";
-import github from "../img/github.svg";
 import emailLogo from "../img/email.svg";
+import github from "../img/github.svg";
 import linkedin from "../img/linkedin.svg";
+import profile from "../img/profile.jpg";
 
 const Body = () => {
-  const email = "thur7012@gmail.com";
+  const email = "thuraminthein.dev@gmail.com";
 
   const launchEmail = () => {
     // window.open("https://mail.google.com");
