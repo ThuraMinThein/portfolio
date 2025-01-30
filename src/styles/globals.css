@@ -1,0 +1,17 @@
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition-all duration-300;
+  }
+
+  .project-card {
+    @apply bg-surface rounded-xl p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .project-card img {
+    @apply transition-transform duration-300 group-hover:scale-105;
+  }
+}

@@ -4,21 +4,24 @@ import Navbar from "./components/navbar";
 import Body from "./components/body";
 import NotFound from "./components/notFound";
 import Resume from "./components/resume";
+import { ThemeProvider } from './components/ThemeProvider';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <div className="Content ">
-          <Routes>
-            <Route path="/" element={<Body />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+    <ThemeProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <div className="Content ">
+            <Routes>
+              <Route path="/" element={<Body />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 export default App;

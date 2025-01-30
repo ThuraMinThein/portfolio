@@ -1,6 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-//import { Parallax, ParallaxBanner } from "react-scroll-parallax";
-
 import emailLogo from "../img/email.svg";
 import github from "../img/github.svg";
 import linkedin from "../img/linkedin.svg";
@@ -10,117 +8,87 @@ const Body = () => {
   const email = "thuraminthein.dev@gmail.com";
 
   const launchEmail = () => {
-    // window.open("https://mail.google.com");
-
-    //window.location.href = `mailto:${email}`;
-
     navigator.clipboard
       .writeText(email)
       .then(() => {
-        console.log(email);
-        alert("copied email to clipboard");
+        alert("Copied email to clipboard!");
       })
       .catch(() => {
-        console.error("couldn't copy email");
+        console.error("Couldn't copy email");
       });
   };
 
-  // const copyEmail = () => {
-  //   navigator.clipboard
-  //     .writeText(email)
-  //     .then(() => {
-  //       console.log("copied email to clipboard");
-  //     })
-  //     .catch(() => {
-  //       console.error("couldn't copy eamil");
-  //     });
-  // };
-
   return (
-    <main className="flex justify-center items-center flex-col">
-      <div id="home" className="h-[550px] md:h-screen flex items-center">
-        <div className="profile w-[380px] md:w-[700px] h-[350px] md:h-[500px] rounded-xl md:rounded-3xl ease-in duration-300">
+    <main className="flex flex-col items-center justify-center">
+      {/* Home Section */}
+      <section id="home" className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
           <img
             src={profile}
-            alt="profile"
-            className="profile__pic w-24 md:w-40 rounded-full hover:rotate-[360deg] ease-in-out duration-300"
+            alt="Profile"
+            className="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover"
           />
-          <div>
-            <h1 className="p-3 mt-4 text-[30px] md:text-[60px]">
-              Hi, I am Thura Min Thein
-            </h1>
-            <h2 className=" p-3 text-[18px] md:text-[30px] my-2 md:my-4">
-              Software Developer <br />
-              <TypeAnimation
-                className=" text-[16px] md:text-xl text-[#9370db] "
-                sequence={["Java", 1000, "Dart", 1000, "JavaScript", 1000]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
-            </h2>
-          </div>
-        </div>
-      </div>
-      {/*home end */}
-      <div id="about" className="flex items-center h-[800px] md:h-screen">
-        <div className="about w-[380px] md:w-[700px] h-[550px] md:h-[500px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
-          <h1 className="text-center font-bold text-lg md:text-2xl">
-            About Me
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Hi, I'm <span className="text-primary">Thura Min Thein</span>
           </h1>
-          <p className=" text-[14px] md:text-[15px] text-justify px-6 pb-9">
-            Hello there! I'm Thura Min Thein, an 18-year-old software enthusiast
-            who absolutely loves coding. For the year I've been fully immersed
-            in the field of software engineering finding great satisfaction, in
-            solving complex problems with lines of code. Coding isn't a skill to
-            me; it's a way to express my creativity and satisfy my curiosity.
-            What truly keeps me engaged is the thrill of taking on challenges
-            and creating solutions. I strongly believe in the power of
-            technology. Constantly explore new programming languages and
-            methodologies. Beyond all the technicalities I see coding as a tool
-            for making changes. Collaboration is at the core of how I work. I
-            deeply value teamwork and effective communication which're essential
-            in every project I'm involved in. As I continue to learn and refine
-            my skills, I'm excited, about contributing to advancements in the
-            evolving world of software engineering.
+          <h2 className="text-xl md:text-3xl mb-6">
+            Software Developer <br />
+            <TypeAnimation
+              sequence={["Java", 1000, "Dart", 1000, "JavaScript", 1000]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-primary"
+            />
+          </h2>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen flex items-center justify-center">
+        <div className="max-w-4xl p-6 bg-surface rounded-xl shadow-lg">
+          <h1 className="text-3xl font-bold text-center mb-6">About Me</h1>
+          <p className="text-lg text-justify">
+            Hello there! I'm Thura Min Thein, an 18-year-old software enthusiast who absolutely loves coding. For the past year, I've been fully immersed in the field of software engineering, finding great satisfaction in solving complex problems with lines of code. Coding isn't just a skill to me; it's a way to express my creativity and satisfy my curiosity. I strongly believe in the power of technology and constantly explore new programming languages and methodologies. Beyond all the technicalities, I see coding as a tool for making changes. Collaboration is at the core of how I work, and I deeply value teamwork and effective communication. As I continue to learn and refine my skills, I'm excited about contributing to advancements in the evolving world of software engineering.
           </p>
         </div>
-      </div>
-      {/* about end */}
+      </section>
 
-      <div id="projects" className="flex items-center h-[800px] md:h-[1000px]">
-        <div>
-          <div>
-            <h1 className="text-4xl my-10">Projects</h1>
-            <div className="flex md:max-w-5xl flex-col ">
-              <a href="https://github.com/ThuraMinThein/DailyList">
-                <div className=" projectDiv text-center my-auto w-[350px] md:w-[500px] h-[250px] md:h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in mb-[50px]">
-                  DailyList
-                </div>
-              </a>
-              <a href="https://github.com/ThuraMinThein/Physics-Spot">
-                <div className="projectDiv text-center my-auto w-[350px] md:w-[500px] h-[250px] md:h-[350px] rounded-xl md:rounded-3xl transition duration-300 ease-in ">
-                  Physics Spot
-                </div>
-              </a>
-            </div>
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen flex items-center justify-center">
+        <div className="max-w-6xl w-full p-6">
+          <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="https://github.com/ThuraMinThein/DailyList" className="project-card">
+              <div className="bg-surface rounded-xl p-6 hover:shadow-xl transition-shadow duration-300">
+                <h2 className="text-2xl font-bold mb-4">DailyList</h2>
+                <p className="text-textSecondary">A task management app built with Flutter.</p>
+              </div>
+            </a>
+            <a href="https://github.com/ThuraMinThein/Physics-Spot" className="project-card">
+              <div className="bg-surface rounded-xl p-6 hover:shadow-xl transition-shadow duration-300">
+                <h2 className="text-2xl font-bold mb-4">Physics Spot</h2>
+                <p className="text-textSecondary">An educational platform for learning physics concepts.</p>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-      {/* project end */}
+      </section>
 
-      <div id="contact" className=" flex h-60 max-w-[1024px] md:mt-12">
-        <a href="https://github.com/thuraminthein">
-          <img src={github} alt="github" className="github w-[55px]" />
-        </a>
-        <a href="https://www.linkedin.com/in/thura-min-thein-05dec12/">
-          <img src={linkedin} alt="linkedin" className="linkedin w-[55px]" />
-        </a>
-        <div className=" cursor-pointer" onClick={launchEmail}>
-          <img src={emailLogo} alt="email" className="email w-[55px]" />
+      {/* Contact Section */}
+      <section id="contact" className="flex justify-center items-center h-60">
+        <div className="flex space-x-8">
+          <a href="https://github.com/thuraminthein" className="hover:scale-110 transition-transform duration-300">
+            <img src={github} alt="GitHub" className="w-12 h-12" />
+          </a>
+          <a href="https://www.linkedin.com/in/thura-min-thein-05dec12/" className="hover:scale-110 transition-transform duration-300">
+            <img src={linkedin} alt="LinkedIn" className="w-12 h-12" />
+          </a>
+          <button onClick={launchEmail} className="hover:scale-110 transition-transform duration-300">
+            <img src={emailLogo} alt="Email" className="w-12 h-12" />
+          </button>
         </div>
-      </div>
-      {/**contact end */}
+      </section>
     </main>
   );
 };

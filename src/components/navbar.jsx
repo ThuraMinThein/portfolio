@@ -2,109 +2,64 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import menuBar from "../img/menu.svg";
 import menuClose from "../img/close.svg";
+import { useTheme } from './ThemeProvider';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { isDark, setIsDark } = useTheme();
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   useEffect(() => {
-    if (nav === true) {
-      document.addEventListener("scroll", () => {
-        setNav(false);
-      });
+    if (nav) {
+      document.addEventListener("scroll", () => setNav(false));
     }
-  });
+  }, [nav]);
 
   return (
-    <div className="flex justify-end items-center h-20 max-w-[1440px] bg-[#e7e7e7] bg-opacity-90 mx-auto sticky top-0 z-[1]">
-      <nav className="navBar">
-        <ul className="md:flex justify-evenly items-center hidden">
-          <li className=" p-4">
-            <a href="/#home" className=" hover:text-[#616060]">
-              Home
-            </a>
-          </li>
-          <li className=" p-4">
-            <a href="/#about" className=" hover:text-[#616060]">
-              About
-            </a>
-          </li>
-          <li className=" p-4">
-            <a href="/#projects" className=" hover:text-[#616060]">
-              Projects
-            </a>
-          </li>
-          <li className="h-10 w-0.5 bg-slate-700 p-[1px]"></li>
-          <li className=" p-2">
-            <Link
-              to={"/resume"}
-              className="resume__button font-medium text-[1em] rounded-[8px] hover:text-[#fff] hover:bg-[#3d3d40] border-transparent border border-solid px-[1.2em] py-[0.6em] transition-all duration-[0.5s] ease-out"
-            >
+    <div className="fixed top-0 w-full bg-surface bg-opacity-90 backdrop-blur-md z-50">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex space-x-8 items-center">
+          <li><a href="/#home" className="hover:text-primary transition-colors duration-300">Home</a></li>
+          <li><a href="/#about" className="hover:text-primary transition-colors duration-300">About</a></li>
+          <li><a href="/#projects" className="hover:text-primary transition-colors duration-300">Projects</a></li>
+          <li className="h-8 w-px bg-textSecondary"></li>
+          <li>
+            <Link to="/resume" className="btn-primary">
               Resume
             </Link>
           </li>
         </ul>
-        {/* mobile Navbar */}
-        <div
-          className=" fixed top-6 right-6 cursor-pointer w-[40px] shadow-none md:hidden"
-          onClick={handleNav}
-        >
-          {!nav ? (
-            <img src={menuBar} alt="menu" />
-          ) : (
-            <img src={menuClose} alt="menuclose"></img>
-          )}
-        </div>
-        <div
-          className={
-            nav
-              ? " fixed left-6 top-6 w-[50%] bg-transparent backdrop-blur-md bg- border border-[#b9b9b9] rounded ease-out duration-500 md:hidden"
-              : "fixed top-[-100%] "
-          }
-        >
-          <ul>
-            <li className=" p-4 border-b border-[#616060]">
-              <a
-                href="/#home"
-                className=" text-slate-950 hover:text-[18px]"
-                onClick={() => setNav(!nav)}
-              >
-                Home
-              </a>
-            </li>
-            <li className=" p-4 border-b border-[#616060]">
-              <a
-                href="/#about"
-                className=" text-slate-950 hover:text-[18px]"
-                onClick={() => setNav(!nav)}
-              >
-                About
-              </a>
-            </li>
-            <li className=" p-4 border-b border-[#616060]">
-              <a
-                href="/#projects"
-                className=" text-slate-950 hover:text-[18px]"
-                onClick={() => setNav(!nav)}
-              >
-                Projects
-              </a>
-            </li>
-            <li className=" flex justify-center">
-              <Link
-                to={"/resume"}
-                onClick={() => setNav(!nav)}
-                className="resume__button text-[1em] w-full text-center text-[#000] hover:text-[#fff] hover:bg-[#3d3d40] border-transparent border border-solid px-[1.2em] py-[0.6em] duration-[0.5s] ease-out"
-              >
-                Resume
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+
+        {/* Mobile Nav Toggle */}
+        <button onClick={handleNav} className="md:hidden">
+          <img src={nav ? menuClose : menuBar} alt="Menu" className="w-8 h-8" />
+        </button>
+
+        {/* Mobile Nav */}
+        {nav && (
+          <div className="fixed top-16 right-4 bg-surface rounded-lg shadow-lg p-4 md:hidden">
+            <ul className="space-y-4">
+              <li><a href="/#home" onClick={handleNav} className="hover:text-primary">Home</a></li>
+              <li><a href="/#about" onClick={handleNav} className="hover:text-primary">About</a></li>
+              <li><a href="/#projects" onClick={handleNav} className="hover:text-primary">Projects</a></li>
+              <li>
+                <Link to="/resume" onClick={handleNav} className="btn-primary">
+                  Resume
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        {/* Theme Toggle */}
+        <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-full hover:bg-primary/10">
+          {isDark ? "🌙" : "☀️"}
+        </button>
+      </div>
     </div>
   );
 };
