@@ -1,11 +1,11 @@
 export const themes = {
     dark: {
-        primary: '#8B5CF6', // Purple
-        secondary: '#60A5FA', // Blue
-        background: '#0F172A', // Dark navy
-        surface: '#1E293B', // Lighter navy
-        text: '#F1F5F9', // Light gray
-        textSecondary: '#94A3B8' // Muted text
+        primary: '#8B5CF6',
+        secondary: '#60A5FA',
+        background: '#0F172A',
+        surface: '#1E293B',
+        text: '#F1F5F9',
+        textSecondary: '#94A3B8',
     },
     light: {
         primary: '#8B5CF6',
@@ -13,6 +13,6 @@ export const themes = {
         background: '#F8FAFC',
         surface: '#FFFFFF',
         text: '#0F172A',
-        textSecondary: '#475569'
-    }
-} 
+        textSecondary: '#475569',
+    },
+};
