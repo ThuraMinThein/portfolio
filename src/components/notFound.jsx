@@ -7,7 +7,7 @@ const NotFound = () => {
           Page not found
         </h1>
         <p className="mt-6 text-base leading-7 text-gray-600">
-          Sorry, we couldn't find the page you're looking for.
+          Sorry, It's not available rn, will be get soo soon (●'◡'●).
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <a
