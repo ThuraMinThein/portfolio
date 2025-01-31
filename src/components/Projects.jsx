@@ -22,7 +22,7 @@ const Projects = () => {
         },
         {
             title: "DailyList",
-            description: "A task management app built with Flutter.",
+            description: "A task management stand alone application built with Java Swing, MySQL.",
             technologies: ["Java", "Swing", "MySQL"],
             github: "https://github.com/ThuraMinThein/DailyList",
         },
