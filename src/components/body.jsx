@@ -4,6 +4,7 @@ import github from "../img/github.svg";
 import linkedin from "../img/linkedin.svg";
 import profile from "../img/profile.png";
 import Projects from './Projects';
+import Skills from './Skills';
 
 const Body = () => {
   const email = "thuraminthein.dev@gmail.com";
@@ -66,6 +67,8 @@ const Body = () => {
           </p>
         </div>
       </section>
+
+      <Skills />
 
       <Projects />
 

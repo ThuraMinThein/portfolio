@@ -14,4 +14,8 @@
   .project-card img {
     @apply transition-transform duration-300 group-hover:scale-105;
   }
+
+  .skill-card {
+    @apply flex flex-col items-center justify-center p-6 bg-surface/50 backdrop-blur-md border border-surface/10 rounded-2xl hover:shadow-xl transition-all duration-300;
+  }
 }
