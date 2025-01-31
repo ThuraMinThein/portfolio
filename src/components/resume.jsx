@@ -19,7 +19,7 @@ const Resume = () => {
 
       <a
         href={resumePDF}
-        download="ThuraMinThein_Resume.pdf"
+        download="ThuraMinThein.pdf"
         className="mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300"
       >
         Download Resume

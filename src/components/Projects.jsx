@@ -10,7 +10,7 @@ const Projects = () => {
             image: dreamBook,
             technologies: ["NestJs", "PostgreSQL", "Cloudinary", "ReactJs", "tailwind"],
             demo: "https://dream-book-dev.vercel.app",
-            github: "https://github.com/ThuraMinThein/dream-book-backend",
+            github: "https://github.com/ThuraMinThein/dream_book_backend",
         },
         {
             title: "TCU",
@@ -18,7 +18,7 @@ const Projects = () => {
             image: tcu, // Add your image path
             technologies: ["React", "Node.js", "PostgreSQL", "NestJs"],
             demo: "https://tcu-to-communicate-with-you.vercel.app",
-            github: "https://github.com/ThuraMinThein/tcu-backend",
+            github: "https://github.com/ThuraMinThein/TCU_backend",
         },
         {
             title: "DailyList",
