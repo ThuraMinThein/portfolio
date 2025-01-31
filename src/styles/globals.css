@@ -38,4 +38,12 @@
   .not-found-button {
     @apply inline-block px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300;
   }
+
+  .pdf-document {
+    @apply overflow-auto max-h-[80vh] w-full;
+  }
+
+  .pdf-document canvas {
+    @apply rounded-lg shadow-md;
+  }
 }
