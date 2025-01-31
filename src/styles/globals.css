@@ -18,4 +18,24 @@
   .skill-card {
     @apply flex flex-col items-center justify-center p-6 bg-surface/50 backdrop-blur-md border border-surface/10 rounded-2xl hover:shadow-xl transition-all duration-300;
   }
+
+  .not-found-container {
+    @apply flex items-center justify-center min-h-screen bg-background;
+  }
+
+  .not-found-heading {
+    @apply text-9xl font-bold text-primary;
+  }
+
+  .not-found-subheading {
+    @apply text-4xl font-bold mb-4 text-text;
+  }
+
+  .not-found-text {
+    @apply text-lg text-textSecondary mb-8;
+  }
+
+  .not-found-button {
+    @apply inline-block px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300;
+  }
 }
