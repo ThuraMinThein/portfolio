@@ -15,7 +15,7 @@ const Resume = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background p-6">
+    <div className="flex flex-col items-center mt-10 justify-center min-h-screen bg-background p-6">
       <div className="bg-surface/50 backdrop-blur-md border border-surface/10 rounded-2xl p-6 shadow-lg">
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
