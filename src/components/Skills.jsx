@@ -3,12 +3,16 @@ import {
     SiDocker,
     SiReact,
     SiTypeorm,
-    SiTypescript,
     SiMysql,
     SiPostgresql,
     SiExpress,
     SiSpring,
     SiPrisma,
+    SiGraphql,
+    // SiTypescript,
+    // SiGithub,
+    // SiGit,
+    // SiPostman,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -23,7 +27,11 @@ const Skills = () => {
         { name: "TypeORM", icon: <SiTypeorm className="w-12 h-12" /> },
         { name: "PrismaORM", icon: <SiPrisma className="w-12 h-12" /> },
         { name: "Docker", icon: <SiDocker className="w-12 h-12" /> },
-        { name: "TypeScript", icon: <SiTypescript className="w-12 h-12" /> },
+        { name: "Graphql", icon: <SiGraphql className="w-12 h-12" /> },
+        // { name: "Typescript", icon: <SiTypescript className="w-12 h-12" /> },
+        // { name: "Git", icon: <SiGit className="w-12 h-12" /> },
+        // { name: "GitHub", icon: <SiGithub className="w-12 h-12" /> },
+        // { name: "Postman", icon: <SiPostman className="w-12 h-12" /> },
     ];
 
     return (
