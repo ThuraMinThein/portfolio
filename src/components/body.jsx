@@ -42,7 +42,8 @@ const Body = () => {
                 "Dart", 1000,
                 "JavaScript", 1000,
                 "TypeScript", 1000,
-                "NestJS", 1000
+                "NestJS", 1000,
+                "SpringBoot", 1000,
               ]}
               wrapper="span"
               speed={50}
