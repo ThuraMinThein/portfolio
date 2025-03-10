@@ -2,6 +2,8 @@ import {
     SiNestjs,
     SiDocker,
     SiReact,
+    SiVuedotjs,
+    SiLinux,
     SiTypeorm,
     SiMysql,
     SiPostgresql,
@@ -9,29 +11,29 @@ import {
     SiSpring,
     SiPrisma,
     SiGraphql,
-    // SiTypescript,
-    // SiGithub,
-    // SiGit,
-    // SiPostman,
+    SiTypescript,
+    SiGit,
+    SiTailwindcss,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const Skills = () => {
     const skills = [
         { name: "NestJS", icon: <SiNestjs className="w-12 h-12" /> },
-        { name: "ExpressJS", icon: <SiExpress className="w-12 h-12" /> },
         { name: "Spring", icon: <SiSpring className="w-12 h-12" /> },
+        { name: "ExpressJS", icon: <SiExpress className="w-12 h-12" /> },
         { name: "React", icon: <SiReact className="w-12 h-12" /> },
+        { name: "Vue", icon: <SiVuedotjs className="w-12 h-12" /> },
+        { name: "Tailwind", icon: <SiTailwindcss className="w-12 h-12" /> },
         { name: "MySQL", icon: <SiMysql className="w-12 h-12" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="w-12 h-12" /> },
         { name: "TypeORM", icon: <SiTypeorm className="w-12 h-12" /> },
         { name: "PrismaORM", icon: <SiPrisma className="w-12 h-12" /> },
         { name: "Docker", icon: <SiDocker className="w-12 h-12" /> },
         { name: "Graphql", icon: <SiGraphql className="w-12 h-12" /> },
-        // { name: "Typescript", icon: <SiTypescript className="w-12 h-12" /> },
-        // { name: "Git", icon: <SiGit className="w-12 h-12" /> },
-        // { name: "GitHub", icon: <SiGithub className="w-12 h-12" /> },
-        // { name: "Postman", icon: <SiPostman className="w-12 h-12" /> },
+        { name: "Typescript", icon: <SiTypescript className="w-12 h-12" /> },
+        { name: "Git", icon: <SiGit className="w-12 h-12" /> },
+        { name: "Linux", icon: <SiLinux className="w-12 h-12" /> },
     ];
 
     return (

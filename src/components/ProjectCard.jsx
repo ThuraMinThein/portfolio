@@ -41,9 +41,8 @@ const ProjectCard = ({ project }) => {
                             View Demo
                         </a>
                     ) : (
-                        <span className="px-4 py-2 bg-gray-500 text-white text-sm rounded-lg">Demo Not Available</span>
+                        <span className="px-4 py-2 bg-gray-700 text-white text-sm rounded-lg">Demo Not Available</span>
                     )}
-
                     <a
                         href={project.github}
                         target="_blank"

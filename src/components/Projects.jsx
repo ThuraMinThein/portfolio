@@ -1,6 +1,7 @@
 import ProjectCard from './ProjectCard';
 import tcu from "../img/tcu.png";
 import dreamBook from "../img/dream-book.png";
+import rsd from "../img/rsd.png";
 
 const Projects = () => {
     const projects = [
@@ -15,10 +16,17 @@ const Projects = () => {
         {
             title: "TCU",
             description: "Chat web application,people can chat with their friends and post the best Quotes",
-            image: tcu, // Add your image path
+            image: tcu,
             technologies: ["React", "Node.js", "PostgreSQL", "NestJs"],
             demo: "https://tcu-to-communicate-with-you.vercel.app",
             github: "https://github.com/ThuraMinThein/TCU_backend",
+        },
+        {
+            title: "RSD",
+            description: "A Full-stack web application for simple social media app built with Java Spring Boot, React, and PostgreSQL.",
+            image: rsd,
+            technologies: ["Spring Boot", "Rest API", "GraphQL", "PostgreSQL", "React", "MUI",],
+            github: "https://github.com/ThuraMinThein/rsd_backend",
         },
         {
             title: "DailyList",
@@ -32,6 +40,7 @@ const Projects = () => {
             technologies: ["Flutter", "Dart"],
             github: "https://github.com/ThuraMinThein/Physics-Spot",
         },
+
     ];
 
     return (
