@@ -6,7 +6,7 @@ import { useTheme } from './ThemeProvider';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const { isDark, setIsDark } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
 
   const handleNav = () => {
     setNav(!nav);
@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
         )}
 
-        <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-full hover:bg-primary/10">
+        <button onClick={() => toggleTheme()} className="p-2 rounded-full hover:bg-primary/10">
           {isDark ? "🌙" : "☀️"}
         </button>
       </div>
